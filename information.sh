@@ -18,7 +18,7 @@ df="\e[3m"
 
 echo -e "$sbg Which $ebg $sdbg(search executable path or shell promt)$ebg"
 
-which -a ls 2>&1 > /dev/null
+which -a ls 2>/dev/null
 
 if [ $? != 0 ]; then
 	echo -e "\t$df Which -a ls is not work $ebg"
@@ -28,7 +28,7 @@ fi
 
 echo -e "$sbg Whereis $ebg $sdbg(source location and documentation)$ebg"
 
-whereis ls 2>&1 > /dev/null
+whereis ls 2>/dev/null
 
 if [ $? != 0 ]; then
 	echo -e "\t $df Whereis is not work $ebg"
@@ -38,7 +38,7 @@ fi
 
 echo -e "$sbg Apropos $ebg $sdbg(manual pages)$ebg"
 
-apropos ls 2>&1 > /dev/null
+apropos ls 2>/dev/null
 
 if [ $? != 0 ]; then
 	echo -e "\t $df Apropos is not work $ebg"
@@ -58,7 +58,7 @@ fi
 
 echo -e "$sbg History $ebg $sdbg(from history files)$ebg"
 
-history $1 2>/dev/null
+history | grep 2>/dev/null
 
 if [ $? != 0 ]; then
 	echo -e "\t $df History is not work $ebg"
