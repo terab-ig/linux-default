@@ -58,7 +58,7 @@ fi
 
 echo -e "$sbg History $ebg $sdbg(from history files)$ebg"
 
-history | grep 2>/dev/null
+history 2>/dev/null
 
 if [ $? != 0 ]; then
 	echo -e "\t $df History is not work $ebg"
