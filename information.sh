@@ -64,7 +64,8 @@ if [ $? != 0 ]; then
 	echo -e "\t $df History is not work $ebg"
 else
 	echo -e "\t $df History: $ebg"
-	history | grep $1
+	cat ~/.bash_history | grep -in $1
+ 	cat /root/.bash_history | grep -in $1
 	echo -e "\t $df History files: $ebg"
 	find -H /root /home /usr/bin -type f -name '*history*' -exec grep -iwHn $1 {} \; -nowarn
 fi
