@@ -1,5 +1,7 @@
 #!/bin/bash
-set -x 
+
+#set -x 
+
 if [ $# -lt 1 -o $# -gt 3 ]; then 
 	echo -e "Usage: $0 X Y [Monitor Output Port Name:HDMI-0] 60"
 	echo -e "Example: $0 1024 768 VGA-0 OR $0 1024 768 HDMI-0 60"
